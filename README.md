@@ -1,25 +1,36 @@
-# Example Terraform module
+<!-- BEGIN_TF_DOCS -->
+# Fortigate Managed AP configuration module
 
-Terraform module which is an example.
-
-
-## Usage
-```hcl
-module "example" {
-  source        = "github.com/sncs-uk/example-module"
-  parameter     = "value"
-  do_something  = true
-}
-```
+This terraform module configures managed APs on a FortiGate firewall
 
 ## Requirements
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
-| <a name="requirement_example"></a> [example](#requirement\_example) | >= 1.23 |
+
+No requirements.
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_example"></a> [example](#provider\_example) | >= 1.23 |
+| <a name="provider_fortios"></a> [fortios](#provider\_fortios) | n/a |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [fortios_wirelesscontroller_wtp.ap](https://registry.terraform.io/providers/fortinetdev/fortios/latest/docs/resources/wirelesscontroller_wtp) | resource |
+| [fortios_wirelesscontroller_wtpgroup.groups](https://registry.terraform.io/providers/fortinetdev/fortios/latest/docs/resources/wirelesscontroller_wtpgroup) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_config_path"></a> [config\_path](#input\_config\_path) | Path to base configuration directory | `string` | n/a | yes |
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->
