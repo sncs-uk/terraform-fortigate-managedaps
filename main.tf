@@ -240,7 +240,7 @@ resource fortios_wirelesscontroller_wtpgroup groups {
   ble_major_id      = try(each.value.ble_major_id, null)
 
   dynamic wtps {
-    for_each        = { for ap in try(each.value.aps, []) : ap => ap }
+    for_each        = { for ap in try(each.value.members, []) : ap => ap }
     content {
       wtp_id        = wtps.value
     }
