@@ -232,6 +232,12 @@ resource "fortios_wirelesscontroller_wtp" "ap" {
       }
     }
   }
+
+  lifecycle {
+    ignore_changes = [
+      index
+    ]
+  }
 }
 
 resource "fortios_wirelesscontroller_wtpgroup" "groups" {
